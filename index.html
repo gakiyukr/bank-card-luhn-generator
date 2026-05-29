@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>銀行卡號生成器</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>銀行卡號生成器</h1>
+
+  <div class="input-group">
+    <input type="text" id="binInput" placeholder="輸入卡號前 6~8 位 BIN" maxlength="8" value="54102901">
+    <button class="btn-generate" onclick="generate()">生成</button>
+  </div>
+
+  <div class="error" id="error"></div>
+
+  <div class="options">
+    <label>
+      卡號長度
+      <select id="lengthSelect">
+        <option value="16" selected>16</option>
+        <option value="19">19</option>
+      </select>
+    </label>
+    <label>
+      數量
+      <select id="countInput">
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="result-header" id="resultHeader" style="display:none;">
+    <span id="resultCount"></span>
+    <button class="btn-copy-all" onclick="copyAll()">複製全部</button>
+  </div>
+
+  <div class="result-list" id="resultList"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

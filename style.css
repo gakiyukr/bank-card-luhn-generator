@@ -1,0 +1,163 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, "Microsoft JhengHei", sans-serif;
+  background: #f5f6fa;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  color: #1a1a2e;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: 1px solid #d0d5e0;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a1a2e;
+  outline: none;
+  letter-spacing: 2px;
+  transition: border-color .2s;
+}
+
+input:focus { border-color: #5b6eea; }
+
+.options {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: .9rem;
+  color: #555;
+}
+
+.options label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+.options select {
+  padding: 6px 10px;
+  border: 1px solid #d0d5e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a1a2e;
+  font-size: .9rem;
+  outline: none;
+  width: 70px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s;
+  font-weight: 600;
+}
+
+.btn-generate {
+  background: #5b6eea;
+  color: #fff;
+}
+
+.btn-generate:hover { background: #4a5cd4; }
+
+.btn-copy-all {
+  background: #e8eaf0;
+  color: #444;
+  font-size: .85rem;
+  padding: 8px 16px;
+  margin-left: auto;
+}
+
+.btn-copy-all:hover { background: #d8dae4; }
+
+.result-header {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 12px;
+}
+
+.result-header span {
+  font-size: .95rem;
+  color: #888;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e0e3eb;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: "Cascadia Code", "Fira Code", monospace;
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+}
+
+.card-row .num { flex: 1; user-select: all; }
+
+.card-row .exp, .card-row .cvv {
+  width: 52px;
+  text-align: center;
+  color: #666;
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+
+.card-row .sep {
+  color: #ccc;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.card-row .copy-btn {
+  background: none;
+  border: none;
+  color: #5b6eea;
+  cursor: pointer;
+  font-size: .8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.card-row .copy-btn:hover { background: #5b6eea15; }
+
+.copied {
+  color: #16a34a !important;
+}
+
+.error {
+  color: #dc2626;
+  font-size: .85rem;
+  margin-bottom: 8px;
+  min-height: 1.2em;
+}
